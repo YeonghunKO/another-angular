@@ -1,0 +1,31 @@
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "rules": {
+    "no-var": "error", // var 금지
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }], // console.log() 금지
+    "curly": "error",
+    "no-unused-vars": "error" // 사용하지 않는 변수 금지
+  }
+}

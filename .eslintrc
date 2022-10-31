@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -20,12 +20,14 @@
   },
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
+
   "rules": {
     "no-var": "error", // var 금지
-    "no-console": ["error", { "allow": ["warn", "error", "info"] }], // console.log() 금지
+    "no-console": ["off", { "allow": ["warn", "error", "info"] }], // console.log() 금지
     "curly": "error",
-    "no-unused-vars": "error" // 사용하지 않는 변수 금지
+    "no-undef": "error"
   }
 }
